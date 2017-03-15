@@ -59,65 +59,64 @@ estaa(33,disponible).
 
 %Estacionamiento para Estudiantes 2 .
 
-estaaa(1,disponible).
-estaaa(2,ocupado).
-estaaa(3,disponible).
-estaaa(4,ocupado).
-estaaa(5,disponible).
-estaaa(6,disponible).
-estaaa(7,ocupado).
-estaaa(8,ocupado).
-estaaa(9,disponible).
-estaaa(10,disponible).
-estaaa(11,ocupado).
-estaaa(12,ocupado).
-estaaa(13,disponible).
-estaaa(14,ocupado).
-estaaa(15,disponible).
-estaaa(16,ocupado).
-estaaa(17,disponible).
-estaaa(18,disponible).
-estaaa(19,ocupado).
-estaaa(20,ocupado).
-estaaa(21,disponible).
-estaaa(22,ocupado).
-estaaa(23,disponible).
-estaaa(24,disponible).
-estaaa(25,ocupado).
-estaaa(26,ocupado).
-estaaa(27,disponible).
-estaaa(28,ocupado).
-estaaa(29,disponible).
-estaaa(30,disponible).
-estaaa(31,ocupado).
-estaaa(32,ocupado).
-estaaa(33,disponible).
+estaaa(34,disponible).
+estaaa(35,ocupado).
+estaaa(36,disponible).
+estaaa(37,ocupado).
+estaaa(38,disponible).
+estaaa(39,disponible).
+estaaa(40,ocupado).
+estaaa(41,ocupado).
+estaaa(42,disponible).
+estaaa(43,disponible).
+estaaa(44,ocupado).
+estaaa(45,ocupado).
+estaaa(46,disponible).
+estaaa(47,ocupado).
+estaaa(48,disponible).
+estaaa(49,ocupado).
+estaaa(50,disponible).
+estaaa(51,disponible).
+estaaa(52,ocupado).
+estaaa(53,ocupado).
+estaaa(54,disponible).
+estaaa(55,ocupado).
+estaaa(56,disponible).
+estaaa(57,disponible).
+estaaa(58,ocupado).
+estaaa(59,ocupado).
+estaaa(60,disponible).
+estaaa(61,ocupado).
+estaaa(62,disponible).
+estaaa(63,disponible).
+estaaa(64,ocupado).
+estaaa(65,ocupado).
+estaaa(66,disponible).
 
 
-%regla que  muestra los Estados en los que se encuentran los Lugares del estacionmineto de los maestros
-lugar(X,Y):-esta(X,Y),write('Lugar '),write(X),write(' esta '),
-write(Y).
 
-% segundo regla que nos indica el Estado de los lugares del estacionamineto de alumnos 1
-lugares_disponibles(X,Y):-estaa(X,Y),write('Lugar '),write(X),write(' esta '),
-write(Y).
+%regla para saber los lugares del estacionamiento de los maestros
+lugares_libres_para_maestros(X,Y):-esta(X,disponible).
 
+%regla para saber los lugares del estacionamiento de los alumnos
+lugares_libres_para_alumnos_1(X,Y):-estaa(X,disponible).
+lugares_libres_para_alumnos_2(X,Y):-esaaa(X,dsiponible).
 
-% Tercera regla que nos indica el Estado de los lugares del estacionamineto de alumnos 2
-lugares_disponibless(X,Y):-estaaa(X,Y),write('Lugar '),write(X),write(' esta '),
-write(Y).
 
 
 % interfaz del estacionamiento de maestros y los estados en los cuales se encuentra
 soy_maestro(X,Y) :-
   write('Estacionamientos exclusivo para Maestros.'),
-nl,write('[ 1 | 2 ]  [ 7 | 8  ]    [13 | 14 ]'),nl,write('[ 3 | 4 ]  [ 9 | 10]    [15 | 16 ]'),nl,write('[ 5 | 6 ]  [11| 12]    [17 | 18 ]'),nl,lugar(X,Y).
+nl,write('[ 1 | 2 ]  [ 7 | 8  ]    [13 | 14 ]'),nl,write('[ 3 | 4 ]  [ 9 | 10]    [15 | 16 ]'),nl,write('[ 5 | 6 ]  [11| 12]    [17 | 18 ]'),nl,write('Lugares disponibles'),
+nl,lugares_libres_para_maestros(X,Y).
+
+
 
 %interfaz del estacionamiento de los alumnos 1 y los estados en los cuales se encuentra
 soy_alumno(X,Y) :-
   write('Estacionamientos exclusivo para Alumnos.'),
 nl,write('[ 1 , 2 , 3 ]'),nl,write('[ 4 , 5 , 6]'),nl,write('[ 7 , 8 , 9 ]'),nl,write('[10,11,12]'),
-nl,write('[13,14,15]'),nl,write('[16,17,18]'),nl,write('[19,20,21]'),nl,lugares_disponibles(X,Y).
+nl,write('[13,14,15]'),nl,write('[16,17,18]'),nl,write('[19,20,21]'),nl,write('Lugares disponibles'),nl,lugares_libres_para_alumnos_1(X,Y).
 
 
 
