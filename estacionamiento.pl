@@ -1,4 +1,4 @@
-%Estacionamiento de Maestros.
+
 
 esta(1,disponible).
 esta(2,ocupado).
@@ -19,8 +19,6 @@ esta(16,disponible).
 esta(17,ocupado).
 esta(18,ocupado).
 
-
-%Estacionamiento para Estudiantes 1 .
 
 estaa(1,disponible).
 estaa(2,ocupado).
@@ -55,56 +53,90 @@ estaa(30,disponible).
 estaa(31,ocupado).
 estaa(32,ocupado).
 estaa(33,disponible).
+estaa(34,disponible).
+estaa(35,ocupado).
+estaa(36,disponible).
+estaa(37,ocupado).
+estaa(38,disponible).
+estaa(39,disponible).
+estaa(40,ocupado).
+estaa(41,ocupado).
+estaa(42,disponible).
+estaa(43,disponible).
+estaa(44,ocupado).
+estaa(45,ocupado).
+estaa(46,disponible).
+estaa(47,ocupado).
+estaa(48,disponible).
+estaa(49,ocupado).
+estaa(50,disponible).
+estaa(51,disponible).
 
 
-%Estacionamiento para Estudiantes 2 .
 
-estaaa(34,disponible).
-estaaa(35,ocupado).
-estaaa(36,disponible).
-estaaa(37,ocupado).
-estaaa(38,disponible).
-estaaa(39,disponible).
-estaaa(40,ocupado).
-estaaa(41,ocupado).
-estaaa(42,disponible).
-estaaa(43,disponible).
-estaaa(44,ocupado).
-estaaa(45,ocupado).
-estaaa(46,disponible).
-estaaa(47,ocupado).
-estaaa(48,disponible).
-estaaa(49,ocupado).
-estaaa(50,disponible).
-estaaa(51,disponible).
 estaaa(52,ocupado).
 estaaa(53,ocupado).
 estaaa(54,disponible).
 estaaa(55,ocupado).
 estaaa(56,disponible).
 estaaa(57,disponible).
+
 estaaa(58,ocupado).
 estaaa(59,ocupado).
 estaaa(60,disponible).
 estaaa(61,ocupado).
 estaaa(62,disponible).
 estaaa(63,disponible).
+
 estaaa(64,ocupado).
 estaaa(65,ocupado).
 estaaa(66,disponible).
+estaaa(66,ocupado).
+estaaa(67,ocupado).
+estaaa(68,disponible).
 
+estaaa(69,ocupado).
+estaaa(70,ocupado).
+estaaa(71,disponible).
+estaaa(72,ocupado).
+estaaa(73,ocupado).
+estaaa(74,disponible).
 
+estaaa(75,ocupado).
+estaaa(76,ocupado).
+estaaa(77,disponible).
+estaaa(78,ocupado).
+estaaa(79,ocupado).
+estaaa(80,disponible).
 
-%regla para saber los lugares del estacionamiento de los maestros
+estaaa(81,ocupado).
+estaaa(82,ocupado).
+estaaa(83,disponible).
+estaaa(84,ocupado).
+estaaa(85,ocupado).
+estaaa(86,disponible).
+
+estaaa(87,ocupado).
+estaaa(88,ocupado).
+estaaa(89,disponible).
+estaaa(90,ocupado).
+estaaa(91,ocupado).
+estaaa(92,disponible).
+
+estaaa(93,ocupado).
+estaaa(94,ocupado).
+estaaa(95,disponible).
+estaaa(96,ocupado).
+estaaa(97,ocupado).
+estaaa(98,disponible).
+estaaa(99,disponible).
+
 lugares_libres_para_maestros(X,Y):-esta(X,disponible).
-
-%regla para saber los lugares del estacionamiento de los alumnos
 lugares_libres_para_alumnos_1(X,Y):-estaa(X,disponible).
-lugares_libres_para_alumnos_2(X,Y):-esaaa(X,dsiponible).
+lugares_libres_para_alumnos_2(X,Y):-estaaa(X,dsiponible).
 
 
 
-% interfaz del estacionamiento de maestros y los estados en los cuales se encuentra
 soy_maestro(X,Y) :-
   write('Estacionamientos exclusivo para Maestros.'),
 nl,write('[ 1 | 2 ]  [ 7 | 8  ]    [13 | 14 ]'),nl,write('[ 3 | 4 ]  [ 9 | 10]    [15 | 16 ]'),nl,write('[ 5 | 6 ]  [11| 12]    [17 | 18 ]'),nl,write('Lugares disponibles'),
@@ -112,12 +144,20 @@ nl,lugares_libres_para_maestros(X,Y).
 
 
 
-%interfaz del estacionamiento de los alumnos 1 y los estados en los cuales se encuentra
-soy_alumno(X,Y) :-
-  write('Estacionamientos exclusivo para Alumnos.'),
-nl,write('[ 1 , 2 , 3 ]'),nl,write('[ 4 , 5 , 6]'),nl,write('[ 7 , 8 , 9 ]'),nl,write('[10,11,12]'),
-nl,write('[13,14,15]'),nl,write('[16,17,18]'),nl,write('[19,20,21]'),nl,write('Lugares disponibles'),nl,lugares_libres_para_alumnos_1(X,Y).
 
+soy_alumno(X,Y) :-
+  write('Estacionamiento  para Alumnos.'),
+nl,write('       Estacionamiento A					Estacionamiento B'),
+nl,write('[ 1 |11 ]  [19|27]    [36 | 44 ]			  [ 52 |58 ]  [64|70]    [76 | 82 ]  [88 | 94 ]'),
+nl,write('[ 3 |12 ]  [20|28]    [37 | 45 ]			  [ 53 |59 ]  [65|71]    [77 | 83 ]  [89 | 95 ]'),
+nl,write('[ 5 |13 ]  [21|29]    [38 | 46 ]			  [ 54 |60 ]  [66|72]    [78 | 84 ]  [90 | 96 ]'),
+nl,write('[ 6 |14 ]  [22|30]    [39 | 47 ] 			  [ 55 |61 ]  [67|73]    [89 | 85 ]  [91 | 97 ]'),
+nl,write('[ 7 |15 ]  [23|31]    [40 | 48 ] 			  [ 56 |62 ]  [68|74]    [80 | 86 ]  [92 | 98 ]'),
+nl,write('[ 8 |16 ]  [24|33]    [41 | 49 ] 			  [ 57 |63 ]  [69|75]    [81 | 87 ]  [93 | 99 ]'),
+nl,write('[ 9 |17 ]  [25|34]    [42 | 50 ]'),                      
+nl,write('[10|18 ]  [26|35]    [43 | 51 ]'),                      
+nl,write('Lugares disponibles del estacionamiento A'),
+nl,lugares_libres_para_alumnos_1(X,Y).
 
 
 
