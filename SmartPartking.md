@@ -200,3 +200,4 @@ En este diagrama podremos observar que cuando un espacio este libre , un led nos
 	Tirso4_israel@hotmail.com
 	luis.alonso.duenas.m@gmail.com
     daniherrera3023@gmail.com
+    
