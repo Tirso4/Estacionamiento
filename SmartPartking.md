@@ -3,9 +3,9 @@
 
 SmartParking tiene como función principal sistematizar los estacionamientos de cualquier tipo de establecimiento. 
 
-**Indice**
+**Contenido**
 ===================
-*	*introducción*
+*	*Introducción*
 *	*Problemática*
 *	*Sistematización* 
 *	*Codigo fuente*
@@ -19,7 +19,7 @@ SmartParking tiene como función principal sistematizar los estacionamientos de 
 ===================
 
 
-Este proyecto esta enfocado en el diseño y creacion de un estacionamiento inteligente, el cual tiene como proposito agilizar la seleccion de un lugar disponible dentro del estacionamiento.
+Este proyecto esta enfocado en el diseño y creación de un estacionamiento inteligente, el cual tiene como proposito agilizar la seleccion de un lugar disponible dentro del estacionamiento.
 
 
 
@@ -199,3 +199,4 @@ En este diagrama podremos observar que cuando un espacio este libre , un led nos
 	Konstrictor65@gmail.com 
 	Tirso4_israel@hotmail.com
 	luis.alonso.duenas.m@gmail.com
+    daniherrera3023@gmail.com
