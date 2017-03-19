@@ -128,20 +128,20 @@ studentPrkngTwo(99,available).
 
 lugares_libres_para_maestros(X,Y):-teacherPrkng(X,available).
 lugares_libres_para_alumnos_1(X,Y):-studentPrkngOne(X,available).
-lugares_libres_para_alumnos_2(X,Y):-studentPrkngTwo(X,dsiponible).
+lugares_libres_para_alumnos_2(X,Y):-studentPrkngTwo(X,available).
 
 
 soy_maestro(X,Y) :-
-  write('Estacionamientos exclusivo para Maestros.'),
-nl,write('[ 1 | 2 ]  [ 7 | 8  ]    [13 | 14 ]'),nl,write('[ 3 | 4 ]  [ 9 | 10]    [15 | 16 ]'),nl,write('[ 5 | 6 ]  [11| 12]    [17 | 18 ]'),nl,write('Lugares availables'),
+  write('Teachers exclusive parking.'),
+nl,write('[ 1 | 2 ]  [ 7 | 8  ]    [13 | 14 ]'),nl,write('[ 3 | 4 ]  [ 9 | 10]    [15 | 16 ]'),nl,write('[ 5 | 6 ]  [11| 12]    [17 | 18 ]'),nl,write('Available spots'),
 nl,lugares_libres_para_maestros(X,Y).
 
 
 
 
 soy_alumno(X,Y) :-
-  write('Estacionamiento  para Alumnos.'),
-nl,write('       Estacionamiento A					Estacionamiento B'),
+  write('Students Parking.'),
+nl,write('       Parking Lot` A					Parking Lot B'),
 nl,write('[ 1 |11 ]  [19|27]    [36 | 44 ]			  [ 52 |58 ]  [64|70]    [76 | 82 ]  [88 | 94 ]'),
 nl,write('[ 3 |12 ]  [20|28]    [37 | 45 ]			  [ 53 |59 ]  [65|71]    [77 | 83 ]  [89 | 95 ]'),
 nl,write('[ 5 |13 ]  [21|29]    [38 | 46 ]			  [ 54 |60 ]  [66|72]    [78 | 84 ]  [90 | 96 ]'),
@@ -150,7 +150,7 @@ nl,write('[ 7 |15 ]  [23|31]    [40 | 48 ] 			  [ 56 |62 ]  [68|74]    [80 | 86 
 nl,write('[ 8 |16 ]  [24|33]    [41 | 49 ] 			  [ 57 |63 ]  [69|75]    [81 | 87 ]  [93 | 99 ]'),
 nl,write('[ 9 |17 ]  [25|34]    [42 | 50 ]'),                      
 nl,write('[10|18 ]  [26|35]    [43 | 51 ]'),                      
-nl,write('Lugares availables del estacionamiento A'),
+nl,write('Available spots on parking lot A'),
 nl,lugares_libres_para_alumnos_1(X,Y).
 
 
